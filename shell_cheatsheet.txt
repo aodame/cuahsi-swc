@@ -1,0 +1,1125 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>boot-camps/shell/shell_cheatsheet.md at master · swcarpentry/boot-camps · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <link rel="logo" type="image/svg" href="https://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
+    <meta property="og:image" content="https://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png">
+    <meta name="hostname" content="fe1.rs.github.com">
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="xhr-socket" href="/_sockets" />
+    
+    
+
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" />
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="xp4KXjQNVtVEDa2XIf1MGSpkXmDY4N/KHQnYh2KnopU=" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-4f29b5d35ac32b7cfd2e276b62b77d0668a99765.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-107d4f8296e1c389d3d0ca4cda2dcf77f9187db2.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+
+      <script src="https://github.global.ssl.fastly.net/assets/frameworks-e8054ad804a1cf9e9849130fee5a4a5487b663ed.js" type="text/javascript"></script>
+      <script src="https://github.global.ssl.fastly.net/assets/github-90f8e0e909066dd1bee7ca4e33b769e7a28f0e3f.js" type="text/javascript"></script>
+      
+      <meta http-equiv="x-pjax-version" content="4cc4d755b5d3b916ed0c805330b7703e">
+
+        <link data-pjax-transient rel='permalink' href='/swcarpentry/boot-camps/blob/09a6048d8153f662dcf817e62d75ac5cde7f35f6/shell/shell_cheatsheet.md'>
+  <meta property="og:title" content="boot-camps"/>
+  <meta property="og:type" content="githubog:gitrepository"/>
+  <meta property="og:url" content="https://github.com/swcarpentry/boot-camps"/>
+  <meta property="og:image" content="https://github.global.ssl.fastly.net/images/gravatars/gravatar-user-420.png"/>
+  <meta property="og:site_name" content="GitHub"/>
+  <meta property="og:description" content="boot-camps - Software Carpentry boot camp material"/>
+
+  <meta name="description" content="boot-camps - Software Carpentry boot camp material" />
+
+  <meta content="2238358" name="octolytics-dimension-user_id" /><meta content="swcarpentry" name="octolytics-dimension-user_login" /><meta content="6821320" name="octolytics-dimension-repository_id" /><meta content="swcarpentry/boot-camps" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="6821320" name="octolytics-dimension-repository_network_root_id" /><meta content="swcarpentry/boot-camps" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/swcarpentry/boot-camps/commits/master.atom" rel="alternate" title="Recent Commits to boot-camps:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_out page-blob windows vis-public env-production ">
+
+    <div class="wrapper">
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions">
+      <a class="button primary" href="/signup">Sign up</a>
+      <a class="button" href="/login?return_to=%2Fswcarpentry%2Fboot-camps%2Fblob%2Fmaster%2Fshell%2Fshell_cheatsheet.md">Sign in</a>
+    </div>
+
+    <div class="command-bar js-command-bar  in-repository">
+
+
+      <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+        <li class="features"><a href="/features">Features</a></li>
+          <li class="enterprise"><a href="https://enterprise.github.com/">Enterprise</a></li>
+          <li class="blog"><a href="/blog">Blog</a></li>
+      </ul>
+        <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    
+      data-repo="swcarpentry/boot-camps"
+      data-branch="master"
+      data-sha="361801186936e4c8554b879a4667e17c541d06e9"
+  >
+
+    <input type="hidden" name="nwo" value="swcarpentry/boot-camps" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="octicon help tooltipped downwards" title="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+    </div>
+
+  </div>
+</div>
+
+
+      
+
+
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+
+  <li>
+  <a href="/login?return_to=%2Fswcarpentry%2Fboot-camps"
+  class="minibutton with-count js-toggler-target star-button entice tooltipped upwards "
+  title="You must be signed in to use this feature" rel="nofollow">
+  <span class="octicon octicon-star"></span>Star
+</a>
+<a class="social-count js-social-count" href="/swcarpentry/boot-camps/stargazers">
+  42
+</a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Fswcarpentry%2Fboot-camps"
+        class="minibutton with-count js-toggler-target fork-button entice tooltipped upwards"
+        title="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-git-branch"></span>Fork
+      </a>
+      <a href="/swcarpentry/boot-camps/network" class="social-count">
+        222
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author">
+            <a href="/swcarpentry" class="url fn" itemprop="url" rel="author"><span itemprop="title">swcarpentry</span></a></span
+          ><span class="repohead-name-divider">/</span><strong
+          ><a href="/swcarpentry/boot-camps" class="js-current-repository js-repo-home-link">boot-camps</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+
+      <div class="repository-with-sidebar repo-container
+            ">
+
+          <div class="repository-sidebar">
+
+              
+
+<div class="repo-nav repo-nav-full js-repository-container-pjax js-octicon-loaders">
+  <div class="repo-nav-contents">
+    <ul class="repo-menu">
+      <li class="tooltipped leftwards" title="Code">
+        <a href="/swcarpentry/boot-camps" aria-label="Code" class="js-selected-navigation-item selected" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /swcarpentry/boot-camps">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped leftwards" title="Issues">
+          <a href="/swcarpentry/boot-camps/issues" aria-label="Issues" class="js-selected-navigation-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /swcarpentry/boot-camps/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>7</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped leftwards" title="Pull Requests"><a href="/swcarpentry/boot-camps/pulls" aria-label="Pull Requests" class="js-selected-navigation-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /swcarpentry/boot-camps/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>3</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+        <li class="tooltipped leftwards" title="Wiki">
+          <a href="/swcarpentry/boot-camps/wiki" aria-label="Wiki" class="js-selected-navigation-item " data-pjax="true" data-selected-links="repo_wiki /swcarpentry/boot-camps/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+
+    </ul>
+    <div class="repo-menu-separator"></div>
+    <ul class="repo-menu">
+
+      <li class="tooltipped leftwards" title="Pulse">
+        <a href="/swcarpentry/boot-camps/pulse" aria-label="Pulse" class="js-selected-navigation-item " data-pjax="true" data-selected-links="pulse /swcarpentry/boot-camps/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Graphs">
+        <a href="/swcarpentry/boot-camps/graphs" aria-label="Graphs" class="js-selected-navigation-item " data-pjax="true" data-selected-links="repo_graphs repo_contributors /swcarpentry/boot-camps/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Network">
+        <a href="/swcarpentry/boot-camps/network" aria-label="Network" class="js-selected-navigation-item js-disable-pjax" data-selected-links="repo_network /swcarpentry/boot-camps/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+    </ul>
+
+  </div>
+</div>
+
+
+              <div class="only-with-full-nav">
+
+                
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+
+  <input type="text" class="clone js-url-field"
+         value="https://github.com/swcarpentry/boot-camps.git" readonly="readonly">
+
+  <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/swcarpentry/boot-camps.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+
+  <input type="text" class="clone js-url-field"
+         value="https://github.com/swcarpentry/boot-camps" readonly="readonly">
+
+  <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/swcarpentry/boot-camps" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+</div>
+
+
+
+<p class="clone-options">You can clone with
+    <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+    <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>,
+  and <a href="https://help.github.com/articles/which-remote-url-should-i-use">other methods.</a>
+</p>
+
+
+  <a href="http://windows.github.com" class="minibutton sidebar-button">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+
+                  <a href="/swcarpentry/boot-camps/archive/master.zip"
+                     class="minibutton sidebar-button"
+                     title="Download this repository as a zip file"
+                     rel="nofollow">
+                    <span class="octicon octicon-cloud-download"></span>
+                    Download ZIP
+                  </a>
+
+              </div>
+          </div>
+
+          <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+            
+
+
+<!-- blob contrib key: blob_contributors:v21:fdcffeadb4b28aac0f223835773b0f47 -->
+<!-- blob contrib frag key: views10/v8/blob_contributors:v21:fdcffeadb4b28aac0f223835773b0f47 -->
+
+<p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
+
+<a href="/swcarpentry/boot-camps/find/master" data-pjax data-hotkey="t" style="display:none">Show File Finder</a>
+
+<div class="file-navigation">
+  
+
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-04-umd/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-04-umd" rel="nofollow" title="2013-04-umd">2013-04-umd</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-05-krakow/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-05-krakow" rel="nofollow" title="2013-05-krakow">2013-05-krakow</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-05-lbl/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-05-lbl" rel="nofollow" title="2013-05-lbl">2013-05-lbl</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-05-nescent/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-05-nescent" rel="nofollow" title="2013-05-nescent">2013-05-nescent</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-05-oxford-dtc/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-05-oxford-dtc" rel="nofollow" title="2013-05-oxford-dtc">2013-05-oxford-dtc</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-05-ucdavis/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-05-ucdavis" rel="nofollow" title="2013-05-ucdavis">2013-05-ucdavis</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-05-umass/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-05-umass" rel="nofollow" title="2013-05-umass">2013-05-umass</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-06-chicago/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-06-chicago" rel="nofollow" title="2013-06-chicago">2013-06-chicago</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-06-dssg/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-06-dssg" rel="nofollow" title="2013-06-dssg">2013-06-dssg</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-06-southampton/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-06-southampton" rel="nofollow" title="2013-06-southampton">2013-06-southampton</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-06-tufts/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-06-tufts" rel="nofollow" title="2013-06-tufts">2013-06-tufts</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-06-wise-advanced/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-06-wise-advanced" rel="nofollow" title="2013-06-wise-advanced">2013-06-wise-advanced</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-06-wise-beginners/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-06-wise-beginners" rel="nofollow" title="2013-06-wise-beginners">2013-06-wise-beginners</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-06-wise-intermediate/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-06-wise-intermediate" rel="nofollow" title="2013-06-wise-intermediate">2013-06-wise-intermediate</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-07-11-iub/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-07-11-iub" rel="nofollow" title="2013-07-11-iub">2013-07-11-iub</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-07-bath/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-07-bath" rel="nofollow" title="2013-07-bath">2013-07-bath</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-07-cmu/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-07-cmu" rel="nofollow" title="2013-07-cmu">2013-07-cmu</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-07-oslo/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-07-oslo" rel="nofollow" title="2013-07-oslo">2013-07-oslo</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-07-wuhan/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-07-wuhan" rel="nofollow" title="2013-07-wuhan">2013-07-wuhan</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-10-cambs-r/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-10-cambs-r" rel="nofollow" title="2013-10-cambs-r">2013-10-cambs-r</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/gh-pages/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="gh-pages" rel="nofollow" title="gh-pages">gh-pages</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="master" rel="nofollow" title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/tufts/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="tufts" rel="nofollow" title="tufts">tufts</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/hackerwith-trieste-solution/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="hackerwith-trieste-solution" rel="nofollow" title="hackerwith-trieste-solution">hackerwith-trieste-solution</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/hackerwith-trieste-master/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="hackerwith-trieste-master" rel="nofollow" title="hackerwith-trieste-master">hackerwith-trieste-master</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-05-06-stanford/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-05-06-stanford" rel="nofollow" title="2013-05-06-stanford">2013-05-06-stanford</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-04-ucb/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-04-ucb" rel="nofollow" title="2013-04-ucb">2013-04-ucb</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-04-manchester/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-04-manchester" rel="nofollow" title="2013-04-manchester">2013-04-manchester</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-04-egi-forum/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-04-egi-forum" rel="nofollow" title="2013-04-egi-forum">2013-04-egi-forum</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-03-lbl-2/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-03-lbl-2" rel="nofollow" title="2013-03-lbl-2">2013-03-lbl-2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-02-uwash-B/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-02-uwash-B" rel="nofollow" title="2013-02-uwash-B">2013-02-uwash-B</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-02-uwash-A/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-02-uwash-A" rel="nofollow" title="2013-02-uwash-A">2013-02-uwash-A</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-01-columbia/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-01-columbia" rel="nofollow" title="2013-01-columbia">2013-01-columbia</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2013-01-chicago/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2013-01-chicago" rel="nofollow" title="2013-01-chicago">2013-01-chicago</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-12-edinburgh/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-12-edinburgh" rel="nofollow" title="2012-12-edinburgh">2012-12-edinburgh</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-12-austin/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-12-austin" rel="nofollow" title="2012-12-austin">2012-12-austin</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-11-unc/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-11-unc" rel="nofollow" title="2012-11-unc">2012-11-unc</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-11-uh/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-11-uh" rel="nofollow" title="2012-11-uh">2012-11-uh</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-11-scripps/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-11-scripps" rel="nofollow" title="2012-11-scripps">2012-11-scripps</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-10-ucb/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-10-ucb" rel="nofollow" title="2012-10-ucb">2012-10-ucb</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-10-purdue/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-10-purdue" rel="nofollow" title="2012-10-purdue">2012-10-purdue</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-10-oxford/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-10-oxford" rel="nofollow" title="2012-10-oxford">2012-10-oxford</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-10-newcastle/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-10-newcastle" rel="nofollow" title="2012-10-newcastle">2012-10-newcastle</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-10-lbl/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-10-lbl" rel="nofollow" title="2012-10-lbl">2012-10-lbl</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-10-gmu/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-10-gmu" rel="nofollow" title="2012-10-gmu">2012-10-gmu</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-10-caltech/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-10-caltech" rel="nofollow" title="2012-10-caltech">2012-10-caltech</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-06-jhu/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-06-jhu" rel="nofollow" title="2012-06-jhu">2012-06-jhu</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-06-inria/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-06-inria" rel="nofollow" title="2012-06-inria">2012-06-inria</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-05-newcastle/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-05-newcastle" rel="nofollow" title="2012-05-newcastle">2012-05-newcastle</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/swcarpentry/boot-camps/blob/2012-04-uchicago/shell/shell_cheatsheet.md" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="2012-04-uchicago" rel="nofollow" title="2012-04-uchicago">2012-04-uchicago</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+  <div class="breadcrumb">
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/swcarpentry/boot-camps" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">boot-camps</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/swcarpentry/boot-camps/tree/master/shell" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">shell</span></a></span><span class="separator"> / </span><strong class="final-path">shell_cheatsheet.md</strong> <span class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="shell/shell_cheatsheet.md" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+  
+  <div class="commit file-history-tease">
+    <img class="main-avatar" height="24" src="https://secure.gravatar.com/avatar/72d8824c3ad4f50edd20478bec4a5210?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
+    <span class="author"><a href="/pipitone" rel="author">pipitone</a></span>
+    <time class="js-relative-date" datetime="2013-04-08T11:32:28-07:00" title="2013-04-08 11:32:28">April 08, 2013</time>
+    <div class="commit-title">
+        <a href="/swcarpentry/boot-camps/commit/fa6c16e11f8d67bb4cf1eef9452b7e0a51c2b9b2" class="message" data-pjax="true">Cheatsheet based on</a> <a href="https://github.com/LJWilliams" class="user-mention">@LJWilliams</a><a href="/swcarpentry/boot-camps/commit/fa6c16e11f8d67bb4cf1eef9452b7e0a51c2b9b2" class="message" data-pjax="true">'s version (PR</a> <a href="https://github.com/swcarpentry/boot-camps/issues/30" class="issue-link" title="Shell script cheat sheet">#30</a><a href="/swcarpentry/boot-camps/commit/fa6c16e11f8d67bb4cf1eef9452b7e0a51c2b9b2" class="message" data-pjax="true">) with updates to ma…</a>
+    </div>
+
+    <div class="participation">
+      <p class="quickstat"><a href="#blob_contributors_box" rel="facebox"><strong>1</strong> contributor</a></p>
+      
+    </div>
+    <div id="blob_contributors_box" style="display:none">
+      <h2 class="facebox-header">Users who have contributed to this file</h2>
+      <ul class="facebox-user-list">
+        <li class="facebox-user-list-item">
+          <img height="24" src="https://secure.gravatar.com/avatar/72d8824c3ad4f50edd20478bec4a5210?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
+          <a href="/pipitone">pipitone</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+<div id="files" class="bubble">
+  <div class="file">
+    <div class="meta">
+      <div class="info">
+        <span class="icon"><b class="octicon octicon-file-text"></b></span>
+        <span class="mode" title="File Mode">file</span>
+          <span>205 lines (136 sloc)</span>
+        <span>13.16 kb</span>
+      </div>
+      <div class="actions">
+        <div class="button-group">
+              <a class="minibutton js-entice" href=""
+                 data-entice="You must be signed in and on a branch to make or propose changes">Edit</a>
+          <a href="/swcarpentry/boot-camps/raw/master/shell/shell_cheatsheet.md" class="button minibutton " id="raw-url">Raw</a>
+            <a href="/swcarpentry/boot-camps/blame/master/shell/shell_cheatsheet.md" class="button minibutton ">Blame</a>
+          <a href="/swcarpentry/boot-camps/commits/master/shell/shell_cheatsheet.md" class="button minibutton " rel="nofollow">History</a>
+        </div><!-- /.button-group -->
+            <a class="minibutton danger empty-icon js-entice" href=""
+               data-entice="You must be signed in and on a branch to make or propose changes">
+            Delete
+          </a>
+      </div><!-- /.actions -->
+
+    </div>
+      
+  <div id="readme" class="blob instapaper_body">
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="basic-shell-commands" class="anchor" href="#basic-shell-commands"><span class="octicon octicon-link"></span></a>Basic Shell Commands</h1>
+
+<hr><h2>
+<a name="1-shell-basics" class="anchor" href="#1-shell-basics"><span class="octicon octicon-link"></span></a>1. Shell Basics:</h2>
+
+<table>
+<thead><tr>
+<th>Command</th>
+<th>Definition</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>.</code></td>
+<td>a single period refers to the current directory</td>
+</tr>
+<tr>
+<td><code>..</code></td>
+<td>a double period refers to the directory immediately above the current directory</td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>refers to your home directory. <em>Note:</em> this command does NOT work on Windows machines (Mac and Linux are okay)</td>
+</tr>
+<tr>
+<td><code>cd ./dirname</code></td>
+<td>changes the current directory to the directory <code>dirname</code>
+</td>
+</tr>
+<tr>
+<td><code>ls -F</code></td>
+<td>tells you what files and directories are in the current directory</td>
+</tr>
+<tr>
+<td><code>pwd</code></td>
+<td>tells you what directory you are in (<code>pwd</code> stands for *p*rint *w*orking *d*irectory)</td>
+</tr>
+<tr>
+<td><code>history</code></td>
+<td>lists previous commands you have entered. `history</td>
+</tr>
+<tr>
+<td>
+<code>man</code> <em>cmd</em>
+</td>
+<td>displays the *man*ual page for a command.</td>
+</tr>
+</tbody>
+</table><h2>
+<a name="2-creating-things" class="anchor" href="#2-creating-things"><span class="octicon octicon-link"></span></a>2. Creating Things:</h2>
+
+<h3>
+<a name="a-how-to-create-new-files-and-directories" class="anchor" href="#a-how-to-create-new-files-and-directories"><span class="octicon octicon-link"></span></a>a) How to create new files and directories..</h3>
+
+<table>
+<thead><tr>
+<th>Command</th>
+<th>Definition</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>mkdir ./dirname</code></td>
+<td>makes a new directory called dirname below the current directory. <em>Note:</em> Windows users will need to use <code>\</code> instead of <code>/</code> for the path separator</td>
+</tr>
+<tr>
+<td><code>nano filename</code></td>
+<td>if <code>filename</code> does not exist, <code>nano</code> creates it and opens the <code>nano</code> text editor. If the file exists, <code>nano</code> opens it. <em>Note:</em> <em>(i)</em> You can use a different text editor if you like.  In gnome Linux, <code>gedit</code> works really well too. <em>(ii)</em> <code>nano</code> (or <code>gedit</code>) create text files. It doesn't matter what the file extension is (or if there is one)</td>
+</tr>
+</tbody>
+</table><h3>
+<a name="b-how-to-delete-files-and-directories" class="anchor" href="#b-how-to-delete-files-and-directories"><span class="octicon octicon-link"></span></a>b) How to delete files and directories...</h3>
+
+<h4>
+<a name="remember-that-deleting-is-forever-there-is-no-going-back" class="anchor" href="#remember-that-deleting-is-forever-there-is-no-going-back"><span class="octicon octicon-link"></span></a><em>Remember that deleting is forever. There is NO going back</em>
+</h4>
+
+<table>
+<thead><tr>
+<th>Command</th>
+<th>Definition</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>rm ./filename</code></td>
+<td>deletes a file called <code>filename</code> from the current directory</td>
+</tr>
+<tr>
+<td><code>rmdir ./dirname</code></td>
+<td>deletes the directory <code>dirname</code> from the current directory. <em>Note:</em> <code>dirname</code> must be empty for <code>rmdir</code> to run.</td>
+</tr>
+</tbody>
+</table><h3>
+<a name="c-how-to-copy-and-rename-files-and-directories" class="anchor" href="#c-how-to-copy-and-rename-files-and-directories"><span class="octicon octicon-link"></span></a>c) How to copy and rename files and directories...</h3>
+
+<table>
+<thead><tr>
+<th>Command</th>
+<th>Definition</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>mv tmp/filename .</code></td>
+<td>moves the file <code>filename</code> from the directory <code>tmp</code> to the current directory. <em>Note:</em> <em>(i)</em> the original <code>filename</code> in <code>tmp</code> is deleted. <em>(ii)</em> <code>mv</code> can also be used to rename files (e.g., <code>mv filename newname</code>
+</td>
+</tr>
+<tr>
+<td><code>cp tmp/filename .</code></td>
+<td>copies the file <code>filename</code> from the directory <code>tmp</code> to the current directory. <em>Note:</em> <em>(i)</em> the original file is still there</td>
+</tr>
+</tbody>
+</table><h2>
+<a name="3-pipes-and-filters" class="anchor" href="#3-pipes-and-filters"><span class="octicon octicon-link"></span></a>3. Pipes and Filters</h2>
+
+<h3>
+<a name="a-how-to-use-wildcards-to-match-filenames" class="anchor" href="#a-how-to-use-wildcards-to-match-filenames"><span class="octicon octicon-link"></span></a>a) How to use wildcards to match filenames...</h3>
+
+<p>Wildcards are a shell feature that makes the command line much more powerful than any GUI file managers. 
+Wildcards are particularly useful when you are looking for directories, files, or file content that can
+vary along a given dimension.  These wildcards can be used with any command that accepts file names or 
+text strings as arguments.</p>
+
+<h4>
+<a name="table-of-commonly-used-wildcards" class="anchor" href="#table-of-commonly-used-wildcards"><span class="octicon octicon-link"></span></a>Table of commonly used wildcards</h4>
+
+<table>
+<thead><tr>
+<th>Wildcard</th>
+<th>Matches</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>*</code></td>
+<td>zero or more characters</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>exactly one character</td>
+</tr>
+<tr>
+<td><code>[abcde]</code></td>
+<td>exactly one of the characters listed</td>
+</tr>
+<tr>
+<td><code>[a-e]</code></td>
+<td>exactly one character in the given range</td>
+</tr>
+<tr>
+<td><code>[!abcde]</code></td>
+<td>any character not listed</td>
+</tr>
+<tr>
+<td><code>[!a-e]</code></td>
+<td>any character that is not in the given range</td>
+</tr>
+<tr>
+<td><code>{software,carpentry}</code></td>
+<td>exactly one entire word from the options given</td>
+</tr>
+</tbody>
+</table><p>See the cheatsheet on regular expressions for more "wildcard" shortcuts.</p>
+
+<h3>
+<a name="b-how-to-redirect-to-a-file-and-get-input-from-a-file-" class="anchor" href="#b-how-to-redirect-to-a-file-and-get-input-from-a-file-"><span class="octicon octicon-link"></span></a>b) How to redirect to a file and get input from a file ...</h3>
+
+<p>Redirection operators can be used to redirect the ouput from a program from the display screen to a file where it is saved (or many other places too, like your printer or to another program where it can be used as input).</p>
+
+<table>
+<thead><tr>
+<th>Command</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>&gt;</code></td>
+<td>write <code>stdout</code> to a new file; overwrites any file with that name (e.g., <code>ls *.md &gt; mardkownfiles.txt</code>)</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>append <code>stdout</code> to a previously existing file; if the file does not exist, it is created (e.g., <code>ls *.md &gt;&gt; markdownfiles.txt</code>)</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>assigns the information in a file to a variable, loop, etc (e.g., <code>n &lt; markdownfiles.md</code>)</td>
+</tr>
+</tbody>
+</table><h4>
+<a name="b1-how-to-use-the-output-of-one-command-as-the-input-to-another-with-a-pipe" class="anchor" href="#b1-how-to-use-the-output-of-one-command-as-the-input-to-another-with-a-pipe"><span class="octicon octicon-link"></span></a>b.1) How to use the output of one command as the input to another with a pipe...</h4>
+
+<p>A special kind of redirection is called a pipe and is denoted by <code>|</code>. </p>
+
+<table>
+<thead><tr>
+<th>Command</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr>
+<td>|</td>
+<td>Output from one command line program can be used as input to another one (e.g. ls *.md | head gives you the first 5 <code>*.md</code> files in your directory)</td>
+</tr></tbody>
+</table><h5>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example:</h5>
+
+<pre><code>ls *.md | head | sed -i `s/markdown/software/g`
+</code></pre>
+
+<p>changes all the instances of the word <code>markdown</code> to <code>software</code> in the first 5 <code>*.md</code> files in your current directory.</p>
+
+<h2>
+<a name="4-how-to-repeat-operations-using-a-loop" class="anchor" href="#4-how-to-repeat-operations-using-a-loop"><span class="octicon octicon-link"></span></a>4. How to repeat operations using a loop...</h2>
+
+<p>Loops assign a value in a list or counter to a variable that takes on a different value each time through the loop.
+There are 2 primary kinds of loops: <code>for</code> loops and <code>while</code> loops.</p>
+
+<h3>
+<a name="a-for-loop" class="anchor" href="#a-for-loop"><span class="octicon octicon-link"></span></a>a) For loop</h3>
+
+<p>For loops loop through variables in a list</p>
+
+<pre><code>for varname in list
+do
+    command 1
+    command 2
+done
+</code></pre>
+
+<p>where,</p>
+
+<ul>
+<li> <code>for</code>, <code>in</code>, <code>do</code>, and <code>done</code> are keywords</li>
+<li> <code>list</code> contains a list of values separated by spaces. e.g. <code>list</code> can be replaced by <code>1 2 3 4 5 6</code> or by <code>Bob Mary Sue Greg</code>. <code>list</code> can also be a variable:</li>
+</ul><h2></h2>
+
+<pre><code>list[0]=Sam
+list[1]=Lynne
+list[2]=Dhavide
+list[3]=Trevor
+.
+.
+.
+list[n]=Mark
+</code></pre>
+
+<p>which is referenced in the loop by:</p>
+
+<pre><code>for varname in ${list[@]}
+do
+    command 1
+    command 2
+done
+</code></pre>
+
+<p><em>Note:</em> Bash is zero indexed, so counting always starts at <code>0</code>, not <code>1</code>.</p>
+
+<h3>
+<a name="b-while-loop" class="anchor" href="#b-while-loop"><span class="octicon octicon-link"></span></a>b) While Loop</h3>
+
+<p>While loops loop through the commands until a condition is met. For example</p>
+
+<pre><code>COUNTER=0
+while [ ${COUNTER} -lt 10 ]; do
+    command 1
+    command 2
+    COUNTER=`expr ${COUNTER} + 1` 
+done
+</code></pre>
+
+<p>continues the loop as long as the value in the variable COUNTER is less than 10 (incremented by 1 on each iteration of the loop).</p>
+
+<ul>
+<li> <code>while</code>, <code>do</code>, and <code>done</code> are keywords</li>
+</ul><h4>
+<a name="b1-commonly-used-conditional-operators" class="anchor" href="#b1-commonly-used-conditional-operators"><span class="octicon octicon-link"></span></a>b.1) Commonly used conditional operators</h4>
+
+<table>
+<thead><tr>
+<th>Operator</th>
+<th>Definition</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>-eq</code></td>
+<td>is equal to</td>
+</tr>
+<tr>
+<td><code>-ne</code></td>
+<td>is not equal to</td>
+</tr>
+<tr>
+<td><code>-gt</code></td>
+<td>greater than</td>
+</tr>
+<tr>
+<td><code>-ge</code></td>
+<td>greater than or equal to</td>
+</tr>
+<tr>
+<td><code>-lt</code></td>
+<td>less than</td>
+</tr>
+<tr>
+<td><code>-le</code></td>
+<td>less than or equal to</td>
+</tr>
+</tbody>
+</table><p>Use <code>man bash</code> or <code>man test</code> to learn about other operators you can use.</p>
+
+<h2>
+<a name="6-finding-things" class="anchor" href="#6-finding-things"><span class="octicon octicon-link"></span></a>6. Finding Things</h2>
+
+<h3>
+<a name="a-how-to-select-lines-matching-patterns-in-text-files" class="anchor" href="#a-how-to-select-lines-matching-patterns-in-text-files"><span class="octicon octicon-link"></span></a>a) How to select lines matching patterns in text files...</h3>
+
+<p>To find information within files, you use a command called <code>grep</code>.</p>
+
+<table>
+<thead><tr>
+<th>Example command</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr>
+<td><code>grep [options] day haiku.txt</code></td>
+<td>finds every instance of the string <code>day</code> in the file haiku.txt and pipes it to standard output</td>
+</tr></tbody>
+</table><h4>
+<a name="a1-commonly-used-grep-options" class="anchor" href="#a1-commonly-used-grep-options"><span class="octicon octicon-link"></span></a>a.1) Commonly used <code>grep</code> options</h4>
+
+<table>
+<thead><tr>
+<th></th>
+<th>
+<code>grep</code> options</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>-E</code></td>
+<td>tells grep you will be using a regular expression. Enclose the regular expression in quotes. <em>Note:</em> the power of <code>grep</code> comes from using regular expressions. Please see the regular expressions sheet for examples</td>
+</tr>
+<tr>
+<td><code>-i</code></td>
+<td>makes matching case-insensitive</td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td>limits the number of lines that match to the first n matches</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>shows lines that do not match the pattern (inverts the match)</td>
+</tr>
+<tr>
+<td><code>-w</code></td>
+<td>outputs instances where the pattern is a whole word</td>
+</tr>
+</tbody>
+</table><h3>
+<a name="b-how-to-find-files-with-certain-properties" class="anchor" href="#b-how-to-find-files-with-certain-properties"><span class="octicon octicon-link"></span></a>b) How to find files with certain properties...</h3>
+
+<p>To find file and directory names, you use a command called <code>find</code></p>
+
+<table>
+<thead><tr>
+<th>Example command</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr>
+<td><code>find . -type d</code></td>
+<td>
+<code>find</code> recursively descends the directory tree for each path listed to match the expression given in the command line with file or directory names in the search path</td>
+</tr></tbody>
+</table><h4>
+<a name="b1-commonly-used-find-options" class="anchor" href="#b1-commonly-used-find-options"><span class="octicon octicon-link"></span></a>b.1) Commonly used <code>find</code> options</h4>
+
+<table>
+<thead><tr>
+<th></th>
+<th>
+<code>find</code> options</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>-type [df]</code></td>
+<td>
+<code>d</code> lists directories; <code>f</code> lists files</td>
+</tr>
+<tr>
+<td><code>-maxdepth n</code></td>
+<td>
+<code>find</code> automatically searches subdirectories. If you don't want that, specify the number of levels below the working directory you would like to search</td>
+</tr>
+<tr>
+<td><code>-mindepth n</code></td>
+<td>starts <code>find</code>'s search <code>n</code> levels below the working directory</td>
+</tr>
+</tbody>
+</table></article>
+  </div>
+
+  </div>
+</div>
+
+<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" class="js-jump-to-line" style="display:none">Jump to Line</a>
+<div id="jump-to-line" style="display:none">
+  <form accept-charset="UTF-8" class="js-jump-to-line-form">
+    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" autofocus>
+    <button type="submit" class="button">Go</button>
+  </form>
+</div>
+
+          </div>
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div>
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2013 <span title="0.09957s from fe1.rs.github.com">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
+                 data-url="/swcarpentry/boot-camps/suggestions/commit">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" title="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
+      title="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+    
+  </body>
+</html>
+

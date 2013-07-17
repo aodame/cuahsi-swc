@@ -1,0 +1,15 @@
+data_copy.txt  data_copy_2.txt  data_drycreek_2013.txt  data_littlebearriver_2013.txt  data_loganriver_2013.txt  data_copy.txt  data_copy_2.txt  data_drycreek_2013.txt  data_littlebearriver_2013.txt  data_loganriver_2013.txt  data_copy.txt  A 145.0
+data_copy_2.txt  A 145.0
+data_drycreek_2013.txt  A 3.0
+data_littlebearriver_2013.txt  A 232.333333333
+data_loganriver_2013.txt  A 145.0
+data_copy.txt  A 145.0
+data_copy_2.txt  A 145.0
+data_drycreek_2013.txt  A 3.0
+data_littlebearriver_2013.txt  A 232.333333333
+data_loganriver_2013.txt  A 145.0
+data_copy.txt  A 145.0
+data_copy_2.txt  A 145.0
+data_drycreek_2013.txt  A 3.0
+data_littlebearriver_2013.txt  A 232.333333333
+data_loganriver_2013.txt  

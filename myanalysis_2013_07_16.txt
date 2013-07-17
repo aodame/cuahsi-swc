@@ -1,0 +1,44 @@
+    1  pwd
+    2  ls
+    3  desktop
+    4  /desktop
+    5  cd/Desktop
+    6  cd Desktop
+    7  cd swc
+    8  ls
+    9  ls
+   10  cp data.txt
+   11  cp data.txt data_copy.txt
+   12  ls
+   13  data.txt
+   14  ls
+   15  cp data.txt data_copy_2.txt
+   16  ls
+   17  mv data.txt data_loganriver_2013.txt
+   18  cd backup
+   19  /backup
+   20  Backup
+   21  /Desktop/swc/Backup
+   22  ~/Desktop/swc/Backup
+   23  pwd
+   24  whereami
+   25  pwd
+   26  cd Backup
+   27  cp data_loganriver_2013.txt data_backup_loganriver_2013.txt
+   28  ./
+   29  clear
+   30  catdata_littlebearriver_2013.txt
+   31  ~/Desktop/swc
+   32  cd/Desktop
+   33  desktop
+   34  ~/Desktop/swc
+   35  cd ~/Desktop/swc
+   36  catdata_littlebearriver_2013.txt
+   37  cat data_littlebearriver_2013.txt
+   38  --help
+   39  tail -1 sorted_rates.txt
+   40  sort -k 3 -n data_littlebearriver_2013.txt
+   41  python avg_discharge_rate.py data_littlebearriver_2013.txt
+   42  python avg_discharge_rate.py data_littlebearriver_2013.txt | sort -k 2 -n | tail -1
+   43  history
+   44  history > myanalysis_2013_07_16.txt
